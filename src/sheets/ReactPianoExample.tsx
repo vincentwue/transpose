@@ -8,6 +8,7 @@ export interface IReactPianoExampleProps {
 }
 
 export function ReactPianoExample(props: IReactPianoExampleProps) {
+  const { firstNote = 0, lastNote = 11 } = props;
   const notes = [
     "C",
     "C# / Db", // or "Db"
@@ -24,12 +25,12 @@ export function ReactPianoExample(props: IReactPianoExampleProps) {
   ];
 
   const mapped = notes.map((note, index) => {
-    return <button onClick={e => state.onNoteClicked(index)}>{note}</button>;
+    return <button onClick={() => state.onNoteClicked(index)}>{note}</button>;
   });
 
   if (!state.pianoVisible) {
     return null;
   }
 
-  return <div>{mapped}</div>;
+  return <React.Fragment>{mapped}</React.Fragment>;
 }

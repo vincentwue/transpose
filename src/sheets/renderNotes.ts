@@ -8,7 +8,7 @@ export function renderNotes(notes: StaveNote[]) {
   const renderer = new Renderer("output", Renderer.Backends.SVG);
 
   // Configure the rendering context.
-  renderer.resize(500, 150);
+  renderer.resize(400, 200);
   const context = renderer.getContext();
   // Create a stave of width 400 at position 10, 40 on the canvas.
   const stave = new Stave(10, 40, 400);

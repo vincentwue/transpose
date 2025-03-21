@@ -11,12 +11,12 @@ export function DegreeButtons() {
 
 
   const mapped = notes.map((note, index) => {
-    return <button onClick={e => state.onDegreeClicked(index)}>{roman[note]}</button>;
+    return <button onClick={() => state.onDegreeClicked(index)}>{roman[note]}</button>;
   });
 
   if (!state.degreeVisible) {
     return null;
   }
 
-  return <div>{mapped}</div>;
+  return <React.Fragment>{mapped}</React.Fragment>;
 }
