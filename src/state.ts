@@ -243,8 +243,9 @@ class State {
         duration: "q",
       })
     );
+
     if (
-      randomNote.length > 1 &&
+      randomNote.length > 3 &&
       (randomNote.includes("#") || randomNote.includes("b"))
     ) {
       if (this.flatKeys.includes(this.sourceKey)) {
