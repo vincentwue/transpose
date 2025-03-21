@@ -58,6 +58,11 @@ class State {
       }
     }
 
+    if (this.correctCounter === this.correctLimit) {
+      this.setRandomKeys();
+      this.correctCounter = 0;
+    }
+
     this.update();
   }
 
@@ -76,11 +81,6 @@ class State {
       }
     }
 
-    if (this.correctCounter === this.correctLimit) {
-      this.setRandomKeys();
-      this.correctCounter = 0;
-    }
-
     this.update();
   }
 
@@ -89,7 +89,7 @@ class State {
     const random2 = Math.floor(Math.random() * 12);
     this.changeSourceKey(random1);
     this.changeTargetKey(random2);
-    this.update();
+    this.fillNotes(true);
   }
 
   // Get the degree (0-6) of the first note in the current key

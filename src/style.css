@@ -4,7 +4,7 @@ body {
   flex-direction: column;
   align-items: center;
   /* justify-content: center; */
-  margin-top: 50px;
+  /* margin-top: 50px; */
   min-width: 320px;
   min-height: 100vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -12,7 +12,7 @@ body {
   color: #333;
   justify-content: space-around;
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 #target {
@@ -29,7 +29,7 @@ body {
   border-radius: 10px;
   /* padding: 10px; */
   font-weight: 600;
-  height: 30px;
+  /* height: 30px; */
   margin-top: 10px;
   margin-left: 10px;
   width: 80px;
@@ -45,6 +45,7 @@ body {
 #output {
   /* height: 100%; */
   width: 100%;
+  /* height: 20%; */
   max-width: 300px;
   /* margin: 20px 0; */
   border-radius: 10px;
