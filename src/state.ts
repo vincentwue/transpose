@@ -23,6 +23,7 @@ class State {
   public onChange = new Subject<State>();
 
   constructor() {
+    this.setRandomKeys();
     this.fillNotes();
     this.update();
   }
@@ -75,12 +76,17 @@ class State {
     }
 
     if (this.correctCounter === 10) {
-      const random1 = Math.floor(Math.random() * 12);
-      const random2 = Math.floor(Math.random() * 12);
-      this.changeSourceKey(random1);
-      this.changeTargetKey(random2);
+      this.setRandomKeys();
     }
 
+    this.update();
+  }
+
+  private setRandomKeys() {
+    const random1 = Math.floor(Math.random() * 12);
+    const random2 = Math.floor(Math.random() * 12);
+    this.changeSourceKey(random1);
+    this.changeTargetKey(random2);
     this.update();
   }
 

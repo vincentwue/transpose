@@ -57,7 +57,7 @@ body {
 #root {
   /* height: 250px; */
   width: 100%;
-  max-width: 500px;
+  max-width: 300px;
   display: flex;
   /* flex-direction: column; */
   align-items: center;
@@ -67,9 +67,9 @@ body {
 }
 
 button {
-  width: 100px;
+  width: 80px;
   margin: 8px;
-  padding: 25px 0;
+  padding: 10px 0;
   border: none;
   border-radius: 6px;
   background-color: #4a6fa5;
