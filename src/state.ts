@@ -8,6 +8,7 @@ class State {
   public targetKey = 5; // F Dur (F Major)
   public flatKeys = [0, 1, 3, 6, 8, 10]; // F, Bb, Eb, Ab, Db
   public correctCounter = 0;
+  public correctLimit = 4;
 
   // Current notes displayed
   public currentNotes: StaveNote[] = [];
@@ -75,8 +76,9 @@ class State {
       }
     }
 
-    if (this.correctCounter === 10) {
+    if (this.correctCounter === this.correctLimit) {
       this.setRandomKeys();
+      this.correctCounter = 0;
     }
 
     this.update();
