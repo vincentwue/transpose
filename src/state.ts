@@ -8,7 +8,7 @@ class State {
   public targetKey = 5; // F Dur (F Major)
   public flatKeys = [0, 1, 3, 6, 8, 10]; // F, Bb, Eb, Ab, Db
   public correctCounter = 0;
-  public correctLimit = 4;
+  public correctLimit = 10;
 
   // Current notes displayed
   public currentNotes: StaveNote[] = [];

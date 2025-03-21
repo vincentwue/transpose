@@ -79,6 +79,12 @@ const Top = () => {
       <select value={state.targetKey} onChange={(e) => {
         state.changeTargetKey(parseInt(e.target.value))
       }}>{keyMap.map((key, index) => <option key={index} value={index}>{key}</option>)}</select>
+      <br />
+      <label>Correct limit:</label>
+      <select value={state.correctLimit} onChange={(e) => {
+        state.correctLimit = parseInt(e.target.value)
+        state.update()
+      }}>{[5, 10, 20, 50, 100].map((limit,) => <option key={limit} value={limit}>{limit}</option>)}</select>
     </React.Fragment>
   );
 }
