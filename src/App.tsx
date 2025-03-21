@@ -67,24 +67,24 @@ const Top = () => {
 
   return (
     <React.Fragment>
-      <label>Correct Counter:</label>
+      <label>correct counter:</label>
       <span>{state.correctCounter}</span>
       <br />
-      <label>Source Key:</label>
-      <select value={state.sourceKey} onChange={(e) => {
-        state.changeSourceKey(parseInt(e.target.value))
-      }}>{keyMap.map((key, index) => <option key={index} value={index}>{key}</option>)}</select>
-      <br />
-      <label>Target Key:</label>
-      <select value={state.targetKey} onChange={(e) => {
-        state.changeTargetKey(parseInt(e.target.value))
-      }}>{keyMap.map((key, index) => <option key={index} value={index}>{key}</option>)}</select>
-      <br />
-      <label>Correct limit:</label>
+      <label>change:</label>
       <select value={state.correctLimit} onChange={(e) => {
         state.correctLimit = parseInt(e.target.value)
         state.update()
       }}>{[5, 10, 20, 50, 100].map((limit,) => <option key={limit} value={limit}>{limit}</option>)}</select>
+      <br />
+      <label>source:</label>
+      <select value={state.sourceKey} onChange={(e) => {
+        state.changeSourceKey(parseInt(e.target.value))
+      }}>{keyMap.map((key, index) => <option key={index} value={index}>{key}</option>)}</select>
+      <br />
+      <label>target:</label>
+      <select value={state.targetKey} onChange={(e) => {
+        state.changeTargetKey(parseInt(e.target.value))
+      }}>{keyMap.map((key, index) => <option key={index} value={index}>{key}</option>)}</select>
     </React.Fragment>
   );
 }
