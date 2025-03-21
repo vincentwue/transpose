@@ -222,7 +222,9 @@ class State {
     );
 
     // Map to 4th octave notation for VexFlow
-    const diatonicNotesInOctave = diatonicNotes.map((note) => `${note}/4`);
+    const diatonicNotesInOctave = diatonicNotes.map(
+      (note) => `${note}/${Math.random() > 0.5 ? 3 : 2}`
+    );
 
     const lastNote = this.currentNotes[this.currentNotes.length - 1]?.keys[0];
     let randomNote = lastNote;
@@ -238,7 +240,7 @@ class State {
 
     this.currentNotes.push(
       new StaveNote({
-        clef: "treble",
+        clef: "bass",
         keys: [randomNote],
         duration: "q",
       })

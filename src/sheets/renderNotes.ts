@@ -14,12 +14,24 @@ export function renderNotes(notes: StaveNote[]) {
   const stave = new Stave(10, 40, 400);
 
   // Add a clef and time signature.
-  stave.addClef("treble").addTimeSignature("4/4");
+  stave.addClef("bass").addTimeSignature("4/4");
 
   // Connect it to the rendering context and draw!
   stave.setContext(context).draw();
   // Create a voice in 4/4 and add above notes
   const voice = new Voice();
+  // const transposed = notes.map((note) => {
+  //   debugger;
+  //   const rese = new StaveNote({
+  //     keys: [`${note.keys[0]}/4`],
+  //     duration: "q",
+  //   });
+  //   const modifiers = note.getModifiers();
+  //   if (modifiers.length > 0) {
+  //     rese.addModifier(modifiers[0]);
+  //   }
+  //   return rese;
+  // });
   voice.addTickables(notes);
 
   // Format and justify the notes to 400 pixels.
