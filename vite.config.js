@@ -1,5 +1,5 @@
 export default {
-    base: './docs', // Relative Pfade statt absoluter
+    base: './', // Relative Pfade statt absoluter
 
     build: {
         outDir: './docs',
