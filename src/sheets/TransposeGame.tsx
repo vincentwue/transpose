@@ -1,5 +1,4 @@
 import * as React from "react";
-import 'react-piano/dist/styles.css';
 import { DegreeButtons } from "./DegreeButtons";
 import { ReactPianoExample } from "./ReactPianoExample";
 
