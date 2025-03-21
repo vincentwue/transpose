@@ -11,7 +11,7 @@ export function DegreeButtons() {
 
 
   const mapped = notes.map((note, index) => {
-    return <button onClick={() => state.onDegreeClicked(index)}>{roman[note]}</button>;
+    return <button key={index} onClick={() => state.onDegreeClicked(index)}>{roman[note]}</button>;
   });
 
   if (!state.degreeVisible) {

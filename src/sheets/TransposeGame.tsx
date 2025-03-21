@@ -7,6 +7,7 @@ export function TransposeGame() {
     return <React.Fragment>
         <DegreeButtons></DegreeButtons>
         <ReactPianoExample></ReactPianoExample>
+
     </React.Fragment>
 
 }

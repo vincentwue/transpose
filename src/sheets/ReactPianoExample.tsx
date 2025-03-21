@@ -25,7 +25,7 @@ export function ReactPianoExample(props: IReactPianoExampleProps) {
   ];
 
   const mapped = notes.map((note, index) => {
-    return <button onClick={() => state.onNoteClicked(index)}>{note}</button>;
+    return <button key={index} onClick={() => state.onNoteClicked(index)}>{note}</button>;
   });
 
   if (!state.pianoVisible) {
