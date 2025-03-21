@@ -1,7 +1,7 @@
 export default {
 
     build: {
-        outDir: './build',
+        outDir: './docs',
         emptyOutDir: true, // also necessary
     }
 }
